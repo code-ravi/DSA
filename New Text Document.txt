@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class RemoveDuplicate{
+	public static String removeDuplicate(String str){
+		char ch[] = str.toCharArray();
+		Set<Character> charSet = new LinkedHashSet<Character>();
+		
+		for(char c: ch){
+			charSet.add(c);
+		}
+		
+		String newStr = new String();
+		for(Chracter c: charSet){
+			newStr.append(c);
+		}
+		return newStr.toString();
+	}
+
+	public static void main(String[]args){
+		System.out.println("String without Duplicates: "+ removeDuplicate("cromacampus"));
+	}
+}
